@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginCreatAccountController">
+   <children>
+      <AnchorPane fx:id="LogIn" layoutY="20.0" prefHeight="361.0" prefWidth="599.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="345.0" layoutY="194.0" text="LOG IN">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="liEmailField" layoutX="251.0" layoutY="279.0" prefHeight="35.0" prefWidth="324.0" promptText="Email" />
+            <PasswordField fx:id="liPassword" layoutX="249.0" layoutY="330.0" prefHeight="35.0" prefWidth="324.0" promptText="Password" />
+            <Button fx:id="loginBut" layoutX="372.0" layoutY="387.0" mnemonicParsing="false" onAction="#login" text="LOG IN" />
+            <Hyperlink fx:id="liLink" layoutX="342.0" layoutY="459.0" onAction="#changePage" text="Create Account">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Text fx:id="lgErrorEmail" fill="RED" layoutX="249.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter email address" visible="false" />
+            <Text fx:id="lgErrorPassword" fill="RED" layoutX="249.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter passwords" visible="false" />
+            <Text fx:id="lgErrorLoginFailed" fill="RED" layoutX="305.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="log in faield" textAlignment="CENTER" visible="false" wrappingWidth="195.9999978542328" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="CreateAccount" layoutX="10.0" layoutY="30.0" prefHeight="361.0" prefWidth="599.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="271.0" layoutY="192.0" text="CREATE ACCOUNT">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="caEmailField" layoutX="243.0" layoutY="251.0" prefHeight="35.0" prefWidth="324.0" promptText="Email" />
+            <TextField fx:id="caFristNameField" layoutX="242.0" layoutY="304.0" prefHeight="35.0" prefWidth="324.0" promptText="Frist Name" />
+            <TextField fx:id="caLastNameField" layoutX="242.0" layoutY="359.0" prefHeight="35.0" prefWidth="324.0" promptText="Last Name" />
+            <PasswordField fx:id="caPassword" layoutX="243.0" layoutY="414.0" prefHeight="35.0" prefWidth="324.0" promptText="Password" />
+            <Button fx:id="creatAccountBut" layoutX="365.0" layoutY="474.0" mnemonicParsing="false" onAction="#creatAccount" text="Create Account" />
+            <Hyperlink fx:id="caLink" layoutX="330.0" layoutY="518.0" onAction="#changePage" text="LogIn to Account">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="291.0" layoutY="179.0" text="error" textFill="RED" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Text fx:id="caErrorEmailAddress" fill="#e44b4b" layoutX="242.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Email Address" visible="false" wrappingWidth="214.13671875" />
+            <Text fx:id="caErrorFristName" fill="#e44b4b" layoutX="242.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Frist Nname" visible="false" wrappingWidth="214.13671875" />
+            <Text fx:id="caErrorLastName" fill="#e44b4b" layoutX="243.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Llast Name" visible="false" wrappingWidth="214.13671875" />
+            <Text fx:id="caErrorPassword" fill="#e44b4b" layoutX="243.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Password" visible="false" wrappingWidth="214.13671875" />
+            <Text fx:id="caSuccses" fill="#1acd4c" layoutX="342.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Created Succusfully" visible="false" />
+            <Text fx:id="caErrorEmailExist" fill="#d31616" layoutX="334.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email exisets" textAlignment="CENTER" visible="false" wrappingWidth="156.271484375" />
+         </children>
+      </AnchorPane>
+      <FontAwesomeIcon fill="#5abff5" glyphName="USER" layoutX="345.0" layoutY="182.0" size="150" text="" />
+   </children>
+</AnchorPane>

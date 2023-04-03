@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TextField fx:id="searchTextField" layoutX="66.0" onAction="#load" prefHeight="30.0" prefWidth="612.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="fullScreenButton" layoutX="759.0" layoutY="570.0" mnemonicParsing="false" onAction="#mackFfulllScreenWindows" prefHeight="25.0" prefWidth="30.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="11.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding></Button>
+      <WebView fx:id="webView" layoutX="-7.0" layoutY="46.0" prefHeight="-1.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
+      <ProgressBar fx:id="loadProgressBar" layoutX="20.0" layoutY="26.0" prefHeight="10.0" prefWidth="800.0" progress="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+      <ProgressBar fx:id="downloadProgressBar" layoutX="5.0" layoutY="577.0" prefHeight="18.0" prefWidth="294.0" progress="0.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+      <Button fx:id="zoomMins" layoutX="639.0" layoutY="270.0" mnemonicParsing="false" onAction="#zoomMins" prefHeight="25.0" prefWidth="25.0" text="-" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="136.0" />
+      <Button fx:id="zoomDefault" layoutX="691.0" layoutY="570.0" mnemonicParsing="false" onAction="#makeZoomDefault" prefHeight="25.0" prefWidth="48.0" text="100%" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="84.0" />
+      <Button fx:id="zoomPlusButton" layoutX="721.0" layoutY="570.0" mnemonicParsing="false" onAction="#zoomPlus" prefHeight="25.0" prefWidth="25.0" text="+" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="54.0" />
+      <FontAwesomeIcon fx:id="forward" fill="#5abff5" glyphName="ARROW_CIRCLE_LEFT" layoutX="14.0" layoutY="24.0" onMousePressed="#loadForward" selectionFill="#c63737" size="30" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <FontAwesomeIcon fx:id="backButton" fill="#5abff5" glyphName="ARROW_CIRCLE_RIGHT" layoutX="48.0" layoutY="24.0" onMousePressed="#loadBack" size="20" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="10.0" />
+      <FontAwesomeIcon fx:id="reloadButton" fill="#5abff5" glyphName="REPEAT" layoutX="633.0" layoutY="22.14285659790039" onMousePressed="#reload" size="20" wrappingWidth="17.14285659790039" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="10.0" />
+      <FontAwesomeIcon fx:id="cancleButton" fill="#5abff5" glyphName="CLOSE" layoutX="658.0" layoutY="75.0" onMousePressed="#cancel" size="20" wrappingWidth="19.64285659790039" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="10.0" />
+      <FontAwesomeIcon fx:id="favoriteButton" fill="#5abff5" glyphName="STAR" layoutX="688.0" layoutY="32.0" onMousePressed="#addToFavorite" size="30" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="5.0" />
+      <FontAwesomeIcon fx:id="parentButton" fill="#5abff5" glyphName="USER" layoutX="740.0" layoutY="24.0" onMousePressed="#parentalControlDisplay" size="30" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="5.0" />
+      <FontAwesomeIcon fx:id="menuButton" fill="#5abff5" glyphName="LIST" layoutX="774.0" layoutY="24.0" onMousePressed="#dismplayMenu" size="30" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+   </children>
+</AnchorPane>
